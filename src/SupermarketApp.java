@@ -107,6 +107,16 @@ public class SupermarketApp {
         }
 
         cashier.printReceipt();
+        System.out.print("Masukkan jumlah uang pembayaran: ");
+        double payment = sc.nextDouble();
+
+        double totalAfterDiscount = 0;
+        double change = payment - (totalAfterDiscount);
+        if (change < 0) {
+            System.out.println("Uang tidak cukup! Anda masih kurang: " + (-change));
+        } else {
+            System.out.println("Kembalian Anda: " + change);
+        }
         sc.close();
     }
 }
